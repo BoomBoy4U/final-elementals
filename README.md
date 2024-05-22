@@ -22,22 +22,22 @@ In this game, you will play as a hero navigating through various stages, battlin
 
 ### Compilation
 Open a terminal or command prompt and navigate to the directory containing the game source files. Use the following command to compile the game:
-\`\`\`bash
+```bash
 g++ -o game GameMenu.cpp Gameplay.cpp Player.cpp Enemy.cpp Boss.cpp Entity.cpp main.cpp
-\`\`\`
+```
 
 ### Running the Game
 After successful compilation, run the game using the following command:
-\`\`\`bash
+```bash
 ./game
-\`\`\`
+```
 
 ### Makefile
 A Makefile is provided for running and compiling the game efficiently. To use the Makefile, simply type in the command:
-\`\`\`bash
+```bash
 make
 ./game
-\`\`\`
+```
 
 ## Gameplay
 
