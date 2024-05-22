@@ -41,6 +41,9 @@ make
 
 ## Gameplay
 
+## Modes
+This game can be either be played using SFML for graphic immersion or can be played using the terminal with just stats.
+
 ### Main Menu
 Upon starting the game, you will be prompted to enter your name. This name will be used throughout the game to identify your character.
 
