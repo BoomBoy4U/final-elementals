@@ -1,1 +1,15 @@
+The code for unit testing!
+
+
+gameplay test:   g++ -o test_Gameplay test_Gameplay.cpp Gameplay.cpp Player.cpp Enemy.cpp Boss.cpp Entity.cpp
+./test_Gameplay
+
+boss class test: g++ -o test_Boss test_boss.cpp Boss.cpp Enemy.cpp Entity.cpp
+./test_Boss
+
+enemy class test: g++ -o test_Enemy test_enemy.cpp Enemy.cpp Entity.cpp
+./test_Enemy
+
+gamemenu test:g++ -o test_GameMenu test_GameMenu.cpp GameMenu.cpp Gameplay.cpp Player.cpp Enemy.cpp Boss.cpp Entity.cpp
+./test_GameMenu
 
