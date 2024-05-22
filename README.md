@@ -41,7 +41,7 @@ make
 
 ## Gameplay
 
-## Modes
+### Modes
 This game can be either be played using SFML for graphic immersion or can be played using the terminal with just stats.
 
 ### Main Menu
