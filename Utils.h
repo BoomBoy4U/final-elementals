@@ -17,7 +17,7 @@ public:
         int x1, y1, x2, y2;
         std::tie(x1, y1) = pos1;
         std::tie(x2, y2) = pos2;
-        return std::sqrt((x2 - x1) * (x2 - y1) + (y2 - y1) * (y2 - y1));
+        return std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
     }
 };
 
