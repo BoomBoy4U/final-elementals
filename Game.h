@@ -13,10 +13,14 @@
 class Game {
 private:
     std::vector<Cell*> grid;
+    int gridWidth;
+    int gridHeight;
 
 public:
     Game() {
-        std::srand(std::time(nullptr)); 
+        std::srand(std::time(nullptr)); // Initialize random seed
+        gridWidth = 10; // Default grid size
+        gridHeight = 10; // Default grid size
     }
 
     std::vector<Cell*>& getGrid() {
@@ -24,6 +28,9 @@ public:
     }
 
     void initGame(int numCharacters, int numTraps, int gridWidth, int gridHeight) {
+        this->gridWidth = gridWidth;
+        this->gridHeight = gridHeight;
+        
         for (int i = 0; i < numCharacters; ++i) {
             auto pos = Utils::generateRandomPos(gridWidth, gridHeight);
             grid.push_back(new Character(std::get<0>(pos), std::get<1>(pos)));
@@ -35,14 +42,11 @@ public:
     }
 
     void gameLoop(int maxIterations, double trapActivationDistance) {
-        int gridWidth = 10;  
-        int gridHeight = 10; 
-
         for (int iteration = 0; iteration < maxIterations; ++iteration) {
             for (auto& cell : grid) {
                 if (cell->getCellType() == CHARACTER) {
                     Character* character = static_cast<Character*>(cell);
-                    character->move(1, 0); 
+                    character->move(1, 0); // Move character to the right
 
                     int x, y;
                     std::tie(x, y) = character->getPos();
